@@ -21,7 +21,7 @@
  }
  $SaldoInicialCredito = $MontoFinanciamiento; // SALDO INICIAL DE CREDITO
  $CalculoCapital = $MontoFinanciamiento / $CoversionAnio_Meses; // CALCULO CAPITAL
- $CalculoCuotaMensualCapital = ($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100)*.13+($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/240)*$TasaInteres/100);
+ $CalculoCuotaMensualCapital = ($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100)*.13+($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100);
 ?>
         <style>
             .aviso_clientes {
