@@ -1,8 +1,37 @@
-<?php 
+<?php
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+░░      TABLA DE AMORTIZACION MENSUAL                                                
+░░              CREDITOS SIMPLES
+░░≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡                       
+░░                                                                               
+░░   -> AUTOR: DANIEL RIVERA                                                               
+░░   -> PHP 8.1, JAVASCRIPT, JQUERY                       
+░░   -> GITHUB: (danielrivera03)                                             
+░░       https://github.com/DanielRivera03                              
+░░   -> TODOS LOS DERECHOS RESERVADOS                           
+░░       © 2021 - 2022    
+░░                                                      
+░░   -> POR FAVOR TOMAR EN CUENTA TODOS LOS COMENTARIOS
+░░      Y REALIZAR LOS AJUSTES PERTINENTES ANTES DE INICIAR
+░░
+░░      ♥♥ HECHO CON ALGUNAS TAZAS DE CAFE ♥♥
+░░                                                                               
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+*/ 
+
+
 // DATOS DE LOCALIZACION -> IDIOMA ESPAÑOL -> ZONA HORARIA EL SALVADOR (UTC-6)
 setlocale(LC_TIME, "spanish");
 date_default_timezone_set('America/El_Salvador');
-$UrlGlobal = "http://" . $_SERVER['SERVER_NAME'] . ":90" . "/CalculoCuotas" . '/';
+// -> CAMBIAR NOMBRE CARPETA RAIZ SI AL EJECUTAR PRUEBAS USTED LO HA NOMBRADO DE OTRA FORMA
+$UrlGlobal = "http://" . $_SERVER['SERVER_NAME'] . ":90" . "/TablaAmortizacionMensual" . '/';
+
+
 ?>
         <!DOCTYPE html>
         <html lang="ES-SV" class="h-100">
