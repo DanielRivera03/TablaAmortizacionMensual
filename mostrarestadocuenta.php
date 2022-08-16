@@ -1,27 +1,58 @@
 <?php 
+
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+░░      TABLA DE AMORTIZACION MENSUAL                                                
+░░              CREDITOS SIMPLES
+░░≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡                       
+░░                                                                               
+░░   -> AUTOR: DANIEL RIVERA                                                               
+░░   -> PHP 8.1, JAVASCRIPT, JQUERY                       
+░░   -> GITHUB: (danielrivera03)                                             
+░░       https://github.com/DanielRivera03                              
+░░   -> TODOS LOS DERECHOS RESERVADOS                           
+░░       © 2021 - 2022    
+░░                                                      
+░░   -> POR FAVOR TOMAR EN CUENTA TODOS LOS COMENTARIOS
+░░      Y REALIZAR LOS AJUSTES PERTINENTES ANTES DE INICIAR
+░░
+░░      ♥♥ HECHO CON ALGUNAS TAZAS DE CAFE ♥♥
+░░                                                                               
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+*/ 
+
+
+
 // RECEPCION DE DATOS
  $NombreClientes = (empty($_POST['val-nombrecliente'])) ? NULL : $_POST['val-nombrecliente'];
  $MontoFinanciamiento = (empty($_POST['val-montofinanciamiento'])) ? NULL : $_POST['val-montofinanciamiento'];
  $PlazoFinanciamiento = (empty($_POST['val-plazocredito'])) ? NULL : $_POST['val-plazocredito'];
  $FechaSolicitud = (empty($_POST['val-fechacreditos'])) ? NULL : $_POST['val-fechacreditos'];
  $TasaInteres = (empty($_POST['val-tasainteres'])) ? NULL : $_POST['val-tasainteres'];
- $UrlGlobal = "http://" . $_SERVER['SERVER_NAME'] . ":90" . "/CalculoCuotas" . '/';
+ $UrlGlobal = "http://" . $_SERVER['SERVER_NAME'] . ":90" . "/TablaAmortizacionMensual" . '/';
+
+
  // NO PERMITIR VISTA SI DATOS NO HAN SIDO PROCESADOS EN FORMULARIO
  if(empty($NombreClientes)){
     header('location:index.php');
  }else{
- // CALCULO DATOS CREDITICIOS
- $CoversionAnio_Meses = $PlazoFinanciamiento * 12; // AÑOS A MESES
- $FechaCompleta = strtotime($FechaSolicitud); // OBTENER FECHA COMPLETA
- $ObtenerDia = date("d", $FechaCompleta); // OBTENER UNICAMENTE DIA
- if($ObtenerDia >=29 && $ObtenerDia <=31){
-    $CalculoDiasPrestamos = $CoversionAnio_Meses;
- }else{
-    $CalculoDiasPrestamos = $CoversionAnio_Meses + 1;
- }
- $SaldoInicialCredito = $MontoFinanciamiento; // SALDO INICIAL DE CREDITO
- $CalculoCapital = $MontoFinanciamiento / $CoversionAnio_Meses; // CALCULO CAPITAL
- $CalculoCuotaMensualCapital = ($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100)*.13+($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100);
+    // CALCULO DATOS CREDITICIOS
+    $CoversionAnio_Meses = $PlazoFinanciamiento * 12; // AÑOS A MESES
+    $FechaCompleta = strtotime($FechaSolicitud); // OBTENER FECHA COMPLETA
+    $ObtenerDia = date("d", $FechaCompleta); // OBTENER UNICAMENTE DIA
+    if($ObtenerDia >=29 && $ObtenerDia <=31){
+        $CalculoDiasPrestamos = $CoversionAnio_Meses;
+    }else{
+        $CalculoDiasPrestamos = $CoversionAnio_Meses + 1;
+    }// CIERRE if($ObtenerDia >=29 && $ObtenerDia <=31)
+    // -> CALCULO CUOTAS CREDITOS CLIENTES
+    $SaldoInicialCredito = $MontoFinanciamiento; // SALDO INICIAL DE CREDITO
+    $CalculoCapital = $MontoFinanciamiento / $CoversionAnio_Meses; // CALCULO CAPITAL
+    $CalculoCuotaMensualCapital = ($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100)*.13+($MontoFinanciamiento/$CoversionAnio_Meses+($MontoFinanciamiento/$CoversionAnio_Meses)*$TasaInteres/100);
 ?>
         <style>
             .aviso_clientes {
@@ -121,14 +152,15 @@
         </form>
         </article>
     </article><br>
-            <table style="width: 95%; margin: auto;" class="table table-striped table-responsive-sm">
-                <thead class="thead-info">
+            <table style="width: 95%; margin: auto;" class="table table-striped table-responsive-sm table-hover">
+                <thead style="background: #079992; color: #fff;">
                     <tr>
                         <th>#</th>
                         <th>Producto</th>
                         <th>Estado</th>
                         <th>&Uacute;ltima Fecha de Pago</th>
                         <th>Cuota Mensual</th>
+                        <th>Capital</th>
                         <th>Saldo Final</th>
                     </tr>
                 </thead>
@@ -319,6 +351,7 @@
                     }
                     echo PHP_EOL;
                 }
+                // CALCULO CUOTA MENSUAL
                 echo '
                 </td>
                     <td class="color-primary">$';
@@ -328,7 +361,17 @@
                     echo number_format($CalculoCuotaMensualCapital, 2);
                 }
                 echo ' USD</td>
+                </td>
                     <td class="color-primary">$';
+                // CALCULO DE CAPITAL
+                if ($ContadorCuotas == 1) {
+                    echo "0.00";
+                } else {
+                    echo number_format($CalculoCapital, 2);
+                }
+                echo ' USD</td> 
+                    <td class="color-primary">$';
+                // CALCULO SALDO FINAL
                 if ($ContadorCuotas == 1) {
                     echo number_format($SaldoInicialCredito, 2);
                 } else {
