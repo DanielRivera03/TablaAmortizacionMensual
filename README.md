@@ -11,7 +11,8 @@
 <p><b>1) Configuración variable global de aplicación:</b> Este proyecto ha sido trabajado bajo el prefijo del puerto número 90. (http://localhost:90/) Por lo cual si usted tiene configurado el mismo con otro puerto, o en su defecto mantiene el estándar original, debe realizar ese cambio; caso contrario los estilos y redirecciones de la aplicación no funcionarán y será imposible el óptimo funcionamiento del mismo.</p>
 
 
-![Configuracion](https://user-images.githubusercontent.com/44457989/163483597-077733bd-8961-4bc7-9f51-e5306cae81cf.png)
+![carbon](https://user-images.githubusercontent.com/44457989/211114848-2ff5b15b-490e-4cbc-bf1f-2d81cbb69a40.png)
+
 
 
 <h2>¿Qué Puedo Realizar?</h2>
@@ -37,21 +38,27 @@
 
 <p><b>4) Impuesto Agregado:</b> Además de realizar el cálculo en base a la tasa de interés establecida, incluye el impuesto sobre el IVA vigente en El Salvador. El cuál su porcentaje es el 13%.</p>
 
+<h2>Fórmula Matemática</h2>
+
+
+![carbon (1)](https://user-images.githubusercontent.com/44457989/211115388-1218fed7-9abf-4b14-bbe4-e22ea342d517.png)
+
 
 <h2>Algunas Capturas</h2>
 
 <h3>* Ingreso Solicitudes</h3>
 
 
-![2](https://user-images.githubusercontent.com/44457989/163485339-31d4e924-90c1-44da-8d30-dc5a6f485127.png)
+
+![Captura web_6-1-2023_171944_localhost](https://user-images.githubusercontent.com/44457989/211115699-325b6e33-0314-4476-90f9-ce7002086590.jpeg)
 
 
 
 <h3>* Muestra Información Final</h3>
 
 
-![3](https://user-images.githubusercontent.com/44457989/163485345-fc410253-0756-4d36-b39d-0e5276380405.png)
-![4](https://user-images.githubusercontent.com/44457989/163485351-16d762e3-4aac-47bf-b900-20b3879e8373.png)
+
+![Captura web_6-1-2023_172038_localhost](https://user-images.githubusercontent.com/44457989/211115784-85eb7d68-450e-4f47-a495-9e2cd669bbed.jpeg)
 
 
 
@@ -59,9 +66,20 @@
 <h3>* Vista Impresión</h3>
 
 
-![5](https://user-images.githubusercontent.com/44457989/163485354-6e0ce202-93dd-4978-b9d1-afeac473d3e2.png)
 
 
+![Captura de pantalla 2023-01-06 172151](https://user-images.githubusercontent.com/44457989/211115875-8fcc89f0-72da-4f28-8997-b7916493d3d9.png)
+
+
+
+<h3>* Documento PDF - Vista Impresión</h3>
+
+
+![Captura de pantalla 2023-01-06 172324](https://user-images.githubusercontent.com/44457989/211116044-0ca5c42c-4a84-4cc9-92e9-1e6b2341605f.png)
+
+
+
+![Captura de pantalla 2023-01-06 172350](https://user-images.githubusercontent.com/44457989/211116052-34b67f46-2b7d-481d-bcde-8a70542b94fc.png)
 
 
 <h2>Muchas gracias por obtener este repositorio hecho con algunas tazas de café ☕ ❤️</h2>
