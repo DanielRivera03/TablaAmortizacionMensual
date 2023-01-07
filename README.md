@@ -14,11 +14,26 @@
 ![carbon](https://user-images.githubusercontent.com/44457989/211114848-2ff5b15b-490e-4cbc-bf1f-2d81cbb69a40.png)
 
 
+<p><b>2) Configuración importación estilos CSS:</b> Lo mencionado en el primer punto, algunos estilos css son importados mediante una regla especial css. Motivo por el cual usted debe cambiar la URL asignada por defecto a la de su servidor (entiéndase por defecto http://localhost:90/) Por favor ubique el archivo en TablaAmortizacionMensual/css/style.css y realice los cambios pertinentes.</p>
+
+
+![carbon (2)](https://user-images.githubusercontent.com/44457989/211121175-2ac3a2c7-b9db-41d9-986d-b15a812de4d0.png)
+
+
 
 <h2>¿Qué Puedo Realizar?</h2>
 
 
 <p>Usted puede simular el registro de una solicitud crediticia, y calcular la cuota mensual respectiva más el cálculo de la tasa de interés que usted designe. <b>Por favor tome en cuenta que este sistema realiza el cálculo de la tasa de interés mensual y no anual, pero perfectamente se puede adecuar a otras necesidades.</b></p>
+
+
+
+
+<h2>¿Deseas probar la demo en vivo?</h2>
+
+
+<p>Por favor acceda a la siguiente URL y verifique el funcionamiento de este sistema: http://amortizacionmensual.unaux.com/.<b> No existe el manejo de sesiones. Únicamente debe completar todos los campos solicitados.</b></p>
+
 
 
 
