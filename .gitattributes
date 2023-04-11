@@ -1,4 +1,4 @@
 * linguist-vendored
 *.js linguist-vendored=false
-*.html linguist-language=PHP
+*.php linguist-language=PHP
 *.scss linguist-language=SCSS
