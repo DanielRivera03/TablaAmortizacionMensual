@@ -32,7 +32,7 @@
 <h2>¿Deseas probar la demo en vivo?</h2>
 
 
-<p>Por favor acceda a la siguiente URL y verifique el funcionamiento de este sistema: http://amortizacionmensual.unaux.com/.<b> No existe el manejo de sesiones. Únicamente debe completar todos los campos solicitados.</b></p>
+<p>Por favor acceda a la siguiente URL y verifique el funcionamiento de este sistema: http://amortizacionmensual.unaux.com/.<b> Ahora también puedes acceder a la siguiente URL: https://cashmanha.helioho.st/TablaAmortizacionMensual/ No existe el manejo de sesiones. Únicamente debe completar todos los campos solicitados.</b></p>
 
 
 
